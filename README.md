@@ -13,4 +13,4 @@ If a user wants to collect the data themselves, they should first run the get_da
 
 The chart_code.py file then reads in the data and creates our radar chart visualization.  The chart can be viewed in mediums such as Jupyter, Spyder, etc, but cannot be seen from the command prompt.  However, if you are experiencing issues with viewing the chart, an example can be seen in the judge_kepler.png file in the repository.
 
-A more comprehensive and step-by-step explanation of this chart, its interpretation, and its creation is available in the chart.ipynb file in this repository.
+A more comprehensive and step-by-step explanation of this chart, its interpretation, and its creation is available in the radar_chart.ipynb file in this repository.
