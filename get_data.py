@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
 
 #Import Packages
 from selenium import webdriver
@@ -18,10 +16,8 @@ from io import StringIO
 import csv
 
 
-# In[ ]:
-
-
 #Web Scrape Data from BaseballSavant using Selenium
+#serv_obj is currently set for my own computer and location of chromedriver, be sure to change file path to the location of chromedriver on your local computer
 serv_obj = Service("C:\\Users\\rhlof\\Downloads\\chromedriver_win32\\chromedriver.exe")
 driver = webdriver.Chrome(service=serv_obj)
 url = 'https://baseballsavant.mlb.com/leaderboard/custom?year=2023&type=batter&filter=&sort=4&sortDir=desc&min=1&selections=b_k_percent,b_bb_percent,xba,xslg,xwoba,xobp,xiso,xwobacon,xbacon,exit_velocity_avg,hard_hit_percent,avg_best_speed,&chart=false&x=xba&y=xba&r=no&chartType=beeswarm'
@@ -35,9 +31,6 @@ for row in rows:
     cells = row.find_elements(By.XPATH, "td")
     data.append([cell.text for cell in cells])
 driver.close()
-
-
-# In[ ]:
 
 
 #Format Raw Data into Appropriate Pandas Data Frame
@@ -61,8 +54,6 @@ df = df.loc[:,['Name','xBA', 'xSLG', 'xwOBA', 'xOBP', 'xISO', 'xwOBACON', 'xBACO
 for x in df.columns:
     df = df[df[x].notna()]
 
-
-# In[ ]:
 
 
 #Upload the File to an AWS Bucket to Become Publically Accessible
