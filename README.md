@@ -11,6 +11,6 @@ The final product that allows an individual to search for any MLB players and se
 
 If a user wants to collect the data themselves, they should first run the get_data.py file.  This file will utilize a web scraping package, Selenium, to obtain data from BaseballSavant, properly format that data into a Pandas data frame, and then upload that data into a .csv file stored in an AWS bucket.  However, please note that a user will have to use their own AWS details in order to run this file properly.  If a user doesn't care about scraping this data themselves, then this file can be ignored.
 
-The chart_code.py file then reads in the data and creates our radar chart visualization.  The chart can be viewed in mediums such as Jupyter, Spyder, etc, but cannot be seen from the command prompt.
+The chart_code.py file then reads in the data and creates our radar chart visualization.  The chart can be viewed in mediums such as Jupyter, Spyder, etc, but cannot be seen from the command prompt.  However, if you are experiencing issues with viewing the chart, an example can be seen in the judge_kepler.png file in the repository.
 
 A more comprehensive and step-by-step explanation of this chart, its interpretation, and its creation is available in the chart.ipynb file in this repository.
